@@ -44,7 +44,6 @@ class movieListCollectionViewCell: UICollectionViewCell {
         
         //Image view
         addSubview(imageView)
-        imageView.image = UIImage(named: "no-image-icon")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         imageView.widthAnchor.constraint(equalToConstant: 60).isActive = true
