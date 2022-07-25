@@ -63,6 +63,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! movieListCollectionViewCell
+        cell.imageView.image = nil
+        cell.layoutIfNeeded()
         cell.imageView.loadImageFrom(posterPath: viewModel.movieList[indexPath.row].posterPath ?? "")
         cell.titleLbael.text = viewModel.movieList[indexPath.row].title
         cell.subTitleLbael.text = viewModel.movieList[indexPath.row].overview
