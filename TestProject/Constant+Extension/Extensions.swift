@@ -17,6 +17,14 @@ extension UIImageView {
                     DispatchQueue.main.async {
                         self?.image = image
                     }
+                }else {
+                    DispatchQueue.main.async {
+                        self?.image = UIImage(named: "no-image-icon")
+                    }
+                }
+            }else {
+                DispatchQueue.main.async {
+                    self?.image = UIImage(named: "no-image-icon")
                 }
             }
         }
